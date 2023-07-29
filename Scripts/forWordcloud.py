@@ -20,7 +20,7 @@ def load_userdict(file_path):
 def generate_wordcloud(text, output_file, stopwords):
     # 生成词云图
     font_path = r'C:\Windows\Fonts\simhei.ttf'  # 字体文件的路径
-    wordcloud = WordCloud(font_path=font_path, background_color='white', width=800, height=400, stopwords=stopwords).generate(text)
+    wordcloud = WordCloud(font_path=font_path, background_color='white', width=800, height=400, stopwords=stopwords,max_words=50,collocations=False).generate(text)
     plt.figure(figsize=(10, 5),dpi=300)
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
